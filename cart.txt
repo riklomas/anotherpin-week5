@@ -1,0 +1,11 @@
+[
+  { product_id: 3, quantity: 2 }, 
+  { product_id: 5, quantity: 1 }, 
+  { product_id: 13, quantity: 1 }, 
+  { product_id: 170, quantity: 3 }
+]
+
+2 red onions
+1 can of tomatoes
+1 tub of greek yogurt
+3 frozen mixed berries
