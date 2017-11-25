@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700|Playfair+Display:400,700');
+
+$white: #FFFFFF;
+$black: #000000;
+$grey: #EDEDEB;
+$accent: #A31621;
+
+$scriptFont: "Playfair Display";
+$sansFont: "Karla";
+
+body {
+  font-family: $sansFont;
+  color: $black;
+}
+
+header, main, footer {
+  padding: 20px;
+}
+
+a {
+  color: $accent;
+  text-decoration: none;
+  border-bottom: 0.1em solid rgba($accent, 0.25);
+  transition: border-bottom-color 0.25s;
+  
+  &:hover {
+    border-bottom-color: $accent;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  h1 {
+    margin: 0;
+  }
+  
+  nav a {
+    margin: 0 0 0 10px;
+  }
+}
+
+footer {
+  color: #999;
+}
+
+
+div.product {
+  width: 200px;
+  
+  img {
+    width: 100%;
+  }
+}

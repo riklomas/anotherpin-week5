@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anotherpin</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1><%= link_to "Another Pin Co", root_path %></h1>
+      
+      <nav>
+        <%= link_to "Shop", products_path %>
+        <%= link_to "Info", info_path %>
+        <%= link_to "Cart (0)", "#" %>        
+      </nav>
+    </header>
+    
+    <main>
+      <%= yield %>
+    </main>
+    
+    <footer>
+      Copyright 2017
+    </footer>
+  </body>
+</html>
