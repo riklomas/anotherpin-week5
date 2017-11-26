@@ -1,0 +1,41 @@
+<h2>Cart</h2>
+
+<% if @current_cart.order_items.any? %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Price</th>
+      <th>Qty</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @current_cart.order_items.each do |item| %>
+      
+      <tr>
+        <td>
+          <%= image_tag item.product.image_1.thumb, width: "50" %>
+          <%= item.product.title %>
+        </td>
+        <td><%= item.product.price %></td>
+        <td>
+          <%= simple_form_for [item.product, item] do |f| %>
+            <%= f.input :quantity, label: false %>
+            
+            <%= f.button :submit, "Update quantity" %>
+          <% end %>       
+        </td>
+        <td>
+          <%= link_to "Remove", product_order_item_path(item.product, item), method: :delete %>
+        </td>
+      </tr>
+      
+    <% end %>
+  </tbody>
+</table>
+
+<% else %>
+  <p class="empty">There are no items in your cart</p>
+<% end %>
